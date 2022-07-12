@@ -1,0 +1,99 @@
+<html>
+  <head>
+    <title>first page</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <h1>My first web page</h1>
+    <h2>What this is</h2>
+    <p>
+      Welcome to <em>my first webpage</em>. I created this webpage without the
+      assistance of webpage editor. Just my little text editor and a keen
+      <strong>understanding of HTML</strong>
+    </p>
+    <h2>Why this is</h2>
+    <ul>
+      <li>To learn HTML</li>
+      <li>List element</li>
+      <ol>
+        <li>Home</li>
+        <li>FAQ</li>
+        <li>Contact</li>
+        <li>About</li>
+      </ol>
+      <li>Here i have created ordered and unordered list</li>
+    </ul>
+    <h2>Zeuslearning.com</h2>
+    <a href="http://www.zeuslearning.com" target="_blank"
+      >This link will open zeuslearning.com in new tab</a
+    >
+    <h2>On click of the following image navigate google.com</h2>
+    <a href="http://www.google.com" target="_blank">
+      <img
+        src="image/googles.jpg"
+        alt="google search"
+        width="100px"
+        height="100px"
+      />
+    </a>
+    <h3>some random table</h3>
+    <table cellspacing="5px" border="1px" cellpadding="1px">
+      <tr>
+        <td>Row 1, cell 1</td>
+        <td>Row 1, cell 2</td>
+        <td>Row 1, cell 3</td>
+      </tr>
+      <tr>
+        <td>Row 2, cell 1</td>
+        <td>Row 2, cell 2</td>
+        <td>Row 2, cell 3</td>
+      </tr>
+      <tr>
+        <td>Row 3, cell 1</td>
+        <td>Row 3, cell 2</td>
+        <td>Row 3, cell 3</td>
+      </tr>
+      <tr>
+        <td>Row 4, cell 1</td>
+        <td>Row 4, cell 2</td>
+        <td>Row 4, cell 3</td>
+      </tr>
+    </table>
+    <h3>some random form</h3>
+    <p><strong>Note:</strong> It looks the partbut won't do anything.</p>
+    <form>
+      <p>Name:</p>
+      <input type="text" name="yourname" id="addname" placeholder="your name" />
+      <p>Comments:</p>
+      <textarea
+        name="comments"
+        id="addcomments"
+        cols="30"
+        rows="10"
+        placeholder="Your comments"
+      ></textarea>
+      <p>Are you:</p>
+      <p><input type="radio" name="gender" id="addmale" />Male</p>
+      <p><input type="radio" name="gender" id="addfemale" />Female</p>
+      <input type="button" value="Submit Query" onclick="validation()" />
+    </form>
+    <script>
+      function validation() {
+        let flag = 0;
+        var a = document.getElementById("addname").value;
+        var b = document.getElementById("addcomments").value;
+        if (
+          document.getElementById("addmale").checked ||
+          document.getElementById("addfemale").checked
+        ) {
+          flag = 1;
+        }
+        if (a.length == 0 || b.length == 0 || flag == 0) {
+          alert("All fields are compulsary");
+        } else {
+          alert("submitted");
+        }
+      }
+    </script>
+  </body>
+</html>
